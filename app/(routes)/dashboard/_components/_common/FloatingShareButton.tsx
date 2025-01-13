@@ -10,7 +10,7 @@ const FloatingShareButton = (props: { isSidebarOpen: boolean }) => {
     const { formData } = useBuilder();
 
     const copyLinkToClipboard = () => {
-        const shareableLink = `http://localhost:3000/public/submit-form/${formData?.formId}`;
+        const shareableLink = `https://form-edge-ai.vercel.app/public/submit-form/${formData?.formId}`;
         navigator.clipboard
             .writeText(shareableLink)
             .then(() => {
