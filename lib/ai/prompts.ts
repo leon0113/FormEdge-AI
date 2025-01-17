@@ -1,14 +1,14 @@
 import { FormBlockInstance } from "@/types";
 
 export const generateFormQuestionPrompt = (
-    userRequest: string,
-    formTitle: string,
-    formDescription: string,
-    currentBlocks: FormBlockInstance[]
+  userRequest: string,
+  formTitle: string,
+  formDescription: string,
+  currentBlocks: FormBlockInstance[]
 ) => {
-    const stringifiedBlocks = JSON.stringify(currentBlocks, null, 2);
+  const stringifiedBlocks = JSON.stringify(currentBlocks, null, 2);
 
-    return `
+  return `
     You are an expert AI assistant for generating JSON objects for forms. Based on user descriptions, generate forms using the following structure and determine the appropriate action type:
      
 

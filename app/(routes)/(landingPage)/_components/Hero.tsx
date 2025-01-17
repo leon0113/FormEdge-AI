@@ -5,8 +5,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
-const words = `Get the best advices from our experts, including expert artists, painters, marathon enthusiasts and RDX, totally free.
-`;
+const words = `Empower your creativity with Gemini AI – the ultimate tool to build, customize, and share forms effortlessly. Turn your ideas into interactive forms faster than ever before!`;
 
 export function Hero() {
 

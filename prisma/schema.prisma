@@ -36,17 +36,8 @@ model FormSettings {
   createdAt       DateTime @default(now())
   updatedAt       DateTime @default(now()) @updatedAt
 
-  forms Form[] // List of forms using this settings object
+  forms Form[]
 }
-
-// model ColorTheme {
-//   id           Int           @id @default(autoincrement())
-//   primaryColor String        // The main color (e.g., #2d31fa)
-//   backgroundColor String     // Background color (e.g., #ffffff)
-//   isDefault    Boolean       @default(false) // Flag for default theme
-
-//   formSettings FormSettings[]
-// }
 
 model FormResponses {
   id           Int      @id @default(autoincrement())

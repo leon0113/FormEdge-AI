@@ -1,17 +1,20 @@
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Header from "./_components/_common/Header";
+import { redirect } from "next/navigation";
 
-export default function DashBoardLayout({
+export default async function DashBoardLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
 
-    // const { isAuthenticated } = getKindeServerSession();
-    // const isUserAuthenticated = isAuthenticated();
 
-    // if (!isUserAuthenticated) {
-    //     redirect("/");
-    // }
+    const { isAuthenticated } = getKindeServerSession();
+    const isUserAuthenticated = await isAuthenticated();
+
+    if (!isUserAuthenticated) {
+        return redirect("/");
+    }
 
 
     return (
